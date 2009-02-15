@@ -1,0 +1,2 @@
+class MusicBox
+end
