@@ -21,12 +21,20 @@ describe MusicBox do
   end
   
   # он должен удалять трек из плейлиста
-  it "should delete track from playlist"
+  it "should delete track from playlist" do
+    song1 = Track.new({:name => "Never Coming Home", :author => 'Sting', :filename => 'haha_not_valid_path'})
+    @musicbox.add(song1)
+    @musicbox.delete_at(0)
+    @musicbox.playlist.should be_empty
+  end
+  
+  it "should only add objects that respond to :play"
+  
+  
   
   # он должен играть выбранный трек
   it "should play the selected track"
     
-  
   
   
   
