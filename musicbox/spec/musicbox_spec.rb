@@ -28,7 +28,12 @@ describe MusicBox do
     @musicbox.playlist.should be_empty
   end
   
-  it "should only add objects that respond to :play"
+  it "should only add objects that respond to :play" do
+    song1 = Track.new({:name => "Never Coming Home", :author => 'Sting', :filename => 'haha_not_valid_path'})
+    @musicbox.add(song1)
+    #p @musicbox.playlist.at(0)
+    @musicbox.playlist.at(0) == {:name => "Never Coming Home", :author => 'Sting', :filename => 'haha_not_valid_path'}
+  end
   
   
   
