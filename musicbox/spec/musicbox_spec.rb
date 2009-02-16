@@ -24,7 +24,7 @@ describe MusicBox do
   it "should delete track from playlist" do
     song1 = Track.new({:name => "Never Coming Home", :author => 'Sting', :filename => 'haha_not_valid_path'})
     @musicbox.add(song1)
-    @musicbox.delete_at(0)
+    @musicbox.playlist.delete_at(0)
     @musicbox.playlist.should be_empty
   end
   
