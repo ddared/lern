@@ -36,16 +36,16 @@ describe MusicBox do
     @musicbox.playlist.first.info == "Sting - Never Coming Home, 3:50"
     @musicbox.playlist.at(1) == nil
   end
-  
-  
-  
-  # он должен играть выбранный трек
+    
+   #он должен играть выбранный трек
   it "should play the selected track" do
     song1 = Track.new({:name => "Never Coming Home", :author => 'Sting', :filename => 'haha_not_valid_path'})
     song2 = Track.new({:name => "Song", :author => 'Authot', :filename => 'haha_not_valid_path'})
     song3 = Track.new({:name => "Any Song", :author => 'Author', :filename => 'haha_not_valid_path'})
-    
-    
+    @musicbox.add(song1)
+    @musicbox.add(song2)
+    @musicbox.add(song3)
+    @musicbox.playlist.at(1).info == "Authot - Song, 3:50"
   end
     
     
