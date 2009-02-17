@@ -31,14 +31,15 @@ describe MusicBox do
   it "should only add objects that respond to :play" do
     song1 = Track.new({:name => "Never Coming Home", :author => 'Sting', :filename => 'haha_not_valid_path'})
     @musicbox.add(song1)
-    #p @musicbox.playlist.at(0)
-    @musicbox.playlist.at(0) == {:name => "Never Coming Home", :author => 'Sting', :filename => 'haha_not_valid_path'}
+    @musicbox.playlist.first.info == "Sting - Never Coming Home, 3:50"
   end
   
   
   
   # он должен играть выбранный трек
-  it "should play the selected track"
+  it "should play the selected track" 
+    
+    
     
   
   

@@ -9,6 +9,6 @@ class MusicBox
   end
   
   def play(track)
-    "#{self.author} - #{self.name}, #{self.filename}"
+    puts @playlist.first.info
   end
 end
