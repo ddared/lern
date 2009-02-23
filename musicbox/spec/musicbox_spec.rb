@@ -30,7 +30,7 @@ describe MusicBox do
   # он должен удалять трек из плейлиста
   it "should delete track from playlist by author and name" do
     @musicbox.add(@song1, @song2)
-    @musicbox.delete("Authot - Song", "Sting - Home")
+    @musicbox.delete("Authot - Song", "Sting - Never Coming Home")
    # @musicbox.playlist.should be_empty
   end
   
