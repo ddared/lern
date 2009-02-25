@@ -8,7 +8,9 @@ require File.expand_path(File.dirname(__FILE__) + '/../lib/musicboxadapter')
 describe MusicboxAdapter do
   
   it "should play music" do
-    @song1 = Track.new({:name => "Never Coming Home", :author => 'Sting', :filename => '~/sites/lern/musicbox/music/Jimmy.mp3'})
+    #@song1 = Track.new({:name => "Never Coming Home", :author => 'Sting', :filename => '~/sites/lern/musicbox/music/Jimmy.mp3'})
+    # запуск spec musicboxadapter_spec.rb
+    @song1 = Track.new({:name => "Never Coming Home", :author => 'Sting', :filename => '../music/Jimmy.mp3'})
     @musicbox = MusicBox.new
     @musicbox.add(@song1)
     @musicbox.play(0)
